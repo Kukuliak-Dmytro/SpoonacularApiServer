@@ -16,8 +16,7 @@ app.get('/', async (req, res) => {
         'x-api-key': `${process.env.apikey}` 
       }
     });
-    res.writeHead(200);
-    res.write(`${response.data}`)
+    res.status(200).json(response.data);
     console.log(response.data);    
 
   } catch (error) {
