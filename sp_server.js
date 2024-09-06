@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 // Example route that makes an API call
 app.get('/', async (req, res) => {
-  const path = req.query.path;  // Extract the query parameter "path"
+  const path = req.query.path;  
 
   try {
     const response = await axios.get(`https://api.spoonacular.com/${path}`, {
